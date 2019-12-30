@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from './components/Homepage';
-
-const SmartPage = () => (
-  <div>
-    <h1>SmartPage</h1>
-  </div>
-);
+import ShopPage from './components/ShopPage';
 
 class App extends Component {
   render() {
@@ -15,7 +10,7 @@ class App extends Component {
       <div>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route path="/casual" component={SmartPage} />
+          <Route path="/shop" component={ShopPage} />
         </Switch>
       </div>
     );
