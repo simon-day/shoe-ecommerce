@@ -4,7 +4,7 @@ import './App.css';
 import Homepage from './components/Homepage';
 import ShopPage from './components/ShopPage';
 import Header from './components/Header';
-import SignInRegister from './components/SignInRegister';
+import SignInSignUp from './components/SignInSignUp';
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/shop" component={ShopPage} />
-          <Route path="/signin" component={SignInRegister} />
+          <Route path="/signin" component={SignInSignUp} />
         </Switch>
       </div>
     );
