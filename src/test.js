@@ -1,33 +1,26 @@
-/**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var singleNumber = function(nums) {
-  let result;
+var balancedStringSplit = function(s) {
+  let matches = 0;
+  const stack = [];
 
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = 1; j < nums.length - 1; j++) {
-      if (nums[i] === nums[j]) {
-        i++;
-        console.log('result: ', result);
-      } else {
-        result = nums[i];
-      }
+  stack.push(s[0]);
+
+  console.log(stack);
+
+  for (let i = 1; i < s.length; i++) {
+    const top = stack[stack.length - 1];
+
+    if (top !== undefined && top !== s[i]) {
+      stack.pop();
+    } else {
+      stack.push(s[i]);
+    }
+
+    if (stack.length === 0) {
+      matches += 1;
     }
   }
 
-  return result;
+  return matches;
 };
 
-console.log(singleNumber([3, 1, 2, 1, 2, 3, 4]));
+console.log(balancedStringSplit('RLRRLLRLRL'));
