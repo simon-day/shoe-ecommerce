@@ -22,7 +22,7 @@ const CartDropdown = ({ cartItems, history, toggleCartHidden }) => (
     </div>
     <CustomButton
       onClick={() => {
-        history.push('checkout');
+        history.push('/checkout');
         toggleCartHidden();
       }}
       inverted
