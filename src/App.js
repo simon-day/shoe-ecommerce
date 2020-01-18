@@ -26,6 +26,7 @@ class App extends Component {
           setCurrentUser({ id: snapShot.id, ...snapShot.data() });
         });
       }
+
       setCurrentUser(userAuth);
     });
   }

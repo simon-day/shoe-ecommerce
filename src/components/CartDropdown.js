@@ -25,7 +25,6 @@ const CartDropdown = ({ cartItems, history, toggleCartHidden }) => (
         history.push('/checkout');
         toggleCartHidden();
       }}
-      inverted
     >
       GO TO CHECKOUT
     </CustomButton>
